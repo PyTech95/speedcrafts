@@ -203,7 +203,7 @@ export default function Home() {
               />
             </div>
 
-            <div>
+            <div className="p-4">
               <div className="text-amber-400 text-xl font-bold mb-6">
                 Speedcrafts Private Limited
               </div>

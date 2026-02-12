@@ -87,7 +87,43 @@ export default function AsphaltBatchMixPlant() {
     e.preventDefault();
     alert("Form submitted");
   };
-
+const accordion = [
+  {
+    title: "Dryer Drum",
+    text:
+      "It is designed for longer life. Proven flight design ensures a perfect distribution of material to be dried. The drum is guided through two rolling steel rings on 4 trunion rollers, coupled with geared motors and bearings, mounted on a sturdy main frame.",
+  },
+  {
+    title: "Burner",
+    text:
+      "Our modulating burner works with either diesel or heavy oil. Burner is provided with servo motor for air regulation and PID Controller for modulation.",
+  },
+  {
+    title: "Batching Tower",
+    text:
+      "It is fully automatic and guarantees best product quality. The operator can choose all the required process parameters and all components of the tower will become automatically set to obtain the requested product. The main units of the tower such as elevator, screen, hot aggregate storage bins and mixer are designed for long life, low maintenance and reliability.",
+  },
+  {
+    title: "Cold Feed Bins",
+    text:
+      "Plants are provided with heavy duty cold feed bins. Bins have self-relieving bottom opening, which eliminates bridging of the feeders. Each bin is provided with variable speed inverter drive through gear box & motor.",
+  },
+  {
+    title: "Control Unit",
+    text:
+      "Computerised Controls are provided for burner, temperature, damper, emergency plant shut down, sequential start and stop, etc. The display shows Aggregate, Asphalt, Filler and Production TPH along with temperature display of Aggregate, Asphalt, Exhaust and Mix Material. Daily production data can be printed out for records. Controls are mounted on a centralised control panel inside the control room.",
+  },
+  {
+    title: "Bag House Filter",
+    text:
+      "Bag house filters remove the dust from the dryer’s exhaust and comply with the most severe environmental regulations. They are fitted with safety devices for temperature control and automatic counter-flow cleaning through main exhauster and complete system for recovery and re-use of filler.",
+  },
+  {
+    title: "Bitumen Tank",
+    text:
+      "Tanks are insulated with rock-wool, available in horizontal type and heated by thermal oil with automatic temperature adjustment. Suitable valves to control the charge, transfer and discharge of bitumen among tanks are provided.",
+  },
+];
   return (
     <div className="bg-white">
       {/* ---------------- HERO SECTION (YOUR CODE) ---------------- */}
@@ -162,96 +198,25 @@ export default function AsphaltBatchMixPlant() {
               </div>
 
               {/* --------- Accordion Section --------- */}
-<div className="mt-8 border border-gray-300 rounded">
+            <div className="mt-8 border border-gray-300 rounded">
+              {accordion.map((it, idx) => (
+                <details
+                  key={it.title}
+                  open={idx === 0}
+                  className="group border-b border-gray-300 last:border-b-0"
+                >
+                  <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
+                    <span>{it.title}</span>
+                    <span className="text-xl font-bold group-open:hidden">+</span>
+                    <span className="text-xl font-bold hidden group-open:block">−</span>
+                  </summary>
 
-  {/* Dryer Drum (default open) */}
-  <details open className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Dryer Drum</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-
-    <div className="px-5 py-4 text-black leading-relaxed font-medium bg-white">
-      It is designed for longer life. Proven flight design ensures a perfect distribution
-      of material to be dried. The drum is guided through two rolling steel rings on
-      4 trunion rollers, coupled with geared motors and bearings, mounted on a sturdy main frame.
-    </div>
-  </details>
-
-  {/* Burner */}
-  <details className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Burner</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-      Our modulating burner works with either diesel or heavy oil. Burner is provided with servo motor for air regulation and PID Controller for modulation.
-    </div>
-  </details>
-
-  {/* Batching Tower */}
-  <details className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Batching Tower</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-      It is fully automatic and guarantees best product quality. The operator can choose all the required process parameters and all components of the tower will become automatically set to obtain the requested product. The main units of the tower such as elevator, screen, hot aggregate storage bins and mixer are designed for long life, low maintenance and reliability.
-    </div>
-  </details>
-
-  {/* Cold Feed Bins */}
-  <details className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Cold Feed Bins</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-      Plants are provided with heavy duty cold feed bins. Bins have self-relieving bottom opening, which eliminates bridging of the feeders. Each bin is provided with variable speed inverter drive through gear box & motor.
-    </div>
-  </details>
-
-  {/* Control Unit */}
-  <details className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Control Unit</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-      Computerised Controls are provided for burner, temperature, damper, emergency plant shut down, sequential start and stop, etc. The display shows Aggregate, Asphalt, Filler and Production TPH along with temperature display of Aggregate, Asphalt, Exhaust and Mix Material. Daily production data can be printed out for records. Controls are mounted on a centralised control panel inside the control room.
-    </div>
-  </details>
-
-  {/* Bag House Filter */}
-  <details className="group border-b border-gray-300">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Bag House Filter</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-     Bag house filters remove the dust from the dryer’s exhaust and comply with the most severe environmental regulations. They are fitted with safety devices for temperature control and automatic counter-flow cleaning through main exhauster and complete system for recovery and re-use of filler.
-    </div>
-  </details>
-
-  {/* Bitumen Tank */}
-  <details className="group">
-    <summary className="cursor-pointer px-5 py-2 flex items-center justify-between bg-gray-100 text-black font-semibold">
-      <span>Bitumen Tank</span>
-      <span className="text-xl font-bold group-open:hidden">+</span>
-      <span className="text-xl font-bold hidden group-open:block">−</span>
-    </summary>
-    <div className="px-5 py-4 text-black font-medium bg-white">
-      Tanks are insulated with rock-wool, available in horizontal type and heated by thermal oil with automatic temperature adjustment. Suitable valves to control the charge, transfer and discharge of bitumen among tanks are provided.
-    </div>
-  </details>
-
-</div>
+                  <div className="px-5 py-4 text-black leading-relaxed bg-white whitespace-pre-line">
+                    {it.text}
+                  </div>
+                </details>
+              ))}
+            </div>
 
             </div>
           </div>

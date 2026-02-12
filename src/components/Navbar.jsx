@@ -281,10 +281,10 @@ export default function Navbar() {
           label: "Concrete Mixing Plant & Equip.",
           children: [
             { to: "/products/concrete-batching-plant", label: "Inline & Compact Concrete Batching Plants," },
-            { to: "/products/Compact", label: "Compact Concrete Plant" },
+            { to: "/products/compact-concrete-plant", label: "Compact Concrete Plant" },
             { to: "/products/Containerised", label: "Containerised Concrete Plant" },
-            { to: "/products/Portable", label: "Portable Concrete Plant" },
-            { to: "/products/Mobile", label: "Mobile Concrete Plants" },
+            { to: "/products/portable-concrete-plant", label: "Portable Concrete Plant" },
+            { to: "/products/mobile-concrete-plant", label: "Mobile Concrete Plants" },
             { to: "/products/Concrete", label: "Concrete Conveyors" },
             
             
@@ -334,7 +334,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="bg-black">
+    <header className="bg-black fixed top-0 left-0 w-full z-[9999]">
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between h-[92px]">
           {/* Logo */}
@@ -385,11 +385,9 @@ export default function Navbar() {
           <aside className="fixed inset-y-0 right-0 w-[86vw] max-w-[360px] bg-black shadow-2xl">
             {/* Header */}
             <div className="relative flex items-center px-4 py-4 border-b border-white/10">
-              <img src={logo} alt="Speedcrafts" className="h-12 w-auto" />
-
               <button
                 onClick={closeMobile}
-                className="absolute right-4 top-4 h-10 w-10 flex items-center justify-center text-white text-2xl"
+                className="absolute right-3 top-1 h-8 w-8 flex items-center justify-center text-white text-xl font-bold"
                 aria-label="Close menu"
               >
                 ✕
