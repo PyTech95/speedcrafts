@@ -38,6 +38,8 @@ import BitumenDecanter from "./pages/products/BitumenDecanter.jsx";
 import WetMixMacadam from "./pages/products/WetMixMacadam.jsx";
 import PotholeRepairing from "./pages/products/PotholeRepairing.jsx";
 
+import Products from "./pages/gallery/products.jsx";
+
 export default function App() {
   return (
     <Routes>
@@ -73,6 +75,9 @@ export default function App() {
         <Route path="/products/Bitumen-Decanter" element={<BitumenDecanter/>}/>
         <Route path="/products/Wet-Mix-Macadam" element={<WetMixMacadam/>}/>
         <Route path="/products/Pothole-Repairing" element={<PotholeRepairing/>}/>
+
+        <Route path="/gallery/Products" element={<Products/>}/>
+
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
 
