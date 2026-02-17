@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-// ✅ Put your 5 hero images here (change paths as per your project)
 import hero1 from "../images/5-76.webp";
 import hero2 from "../images/3-76.webp";
 import hero3 from "../images/6-74.webp";
@@ -68,19 +67,6 @@ function Counter({ icon, value, label }) {
   );
 }
 
-function WhatsAppFloat() {
-  return (
-    <a
-      href="https://wa.me/919811859288"
-      target="_blank"
-      rel="noreferrer"
-      className="fixed left-6 bottom-6 z-50 h-16 w-16 rounded-full bg-green-500 grid place-items-center shadow-card"
-      aria-label="WhatsApp"
-    >
-      <span className="text-white text-2xl font-black"><i class="fa-brands fa-whatsapp"></i></span>
-    </a>
-  );
-}
 function Marquee() {
   const text = "MADE IN INDIA, TRUSTED GLOBALLY";
 
@@ -107,31 +93,6 @@ function Marquee() {
   );
 }
 
-
-
-function ScrollTopFloat() {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 500);
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  if (!show) return null;
-
-  return (
-    <button
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed right-6 bottom-6 z-50 h-16 w-16 rounded-full bg-white grid place-items-center border-4 border-green-500 shadow-card"
-      aria-label="Scroll to top"
-    >
-      <span className="text-green-600 text-3xl font-black">↑</span>
-    </button>
-  );
-}
-
-/* ✅ HERO SLIDER COMPONENT */
 function HeroSlider() {
   const slides = useMemo(() => [hero1, hero2, hero3, hero4, hero5], []);
   const [index, setIndex] = useState(0);
@@ -313,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* COUNTERS ROW */}
-      <section className="bg-white py-12 border-t border-black/10">
+      <section className="bg-white py-12">
         <div className="mx-auto  px-4">
           <div className="grid md:grid-cols-4 gap-10 items-center">
             <Counter icon={helmet} value="350+" label="Engineers & Workers" />
@@ -323,10 +284,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* FLOATING BUTTONS */}
-      <WhatsAppFloat />
-      <ScrollTopFloat />
     </div>
   );
 }

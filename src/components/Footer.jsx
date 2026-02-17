@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="mt-6 text-sm space-y-4">
               <div className="flex gap-3">
                 <div className="h-9 w-9 rounded bg-amber-400 grid place-items-center text-black font-black">
-                 <i class="fas fa-map-marker-alt"></i>
+                 <i className="fas fa-map-marker-alt"></i>
                 </div>
                 <div className="leading-6">
                   <div className="font-bold">Speedcrafts Pvt. Ltd.</div>
@@ -58,21 +58,21 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded bg-amber-400 grid place-items-center text-black font-black">
-                 <i class="fa-sharp fa-solid fa-phone"></i>
+                 <i className="fa-sharp fa-solid fa-phone"></i>
                 </div>
                 <div className="text-white/90">+91 9650089228</div>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded bg-amber-400 grid place-items-center text-black font-black">
-                <i class="fa-sharp fa-solid fa-phone"></i>
+                <i className="fa-sharp fa-solid fa-phone"></i>
                 </div>
                 <div className="text-white/90">+91 9811859288</div>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded bg-amber-400 grid place-items-center text-black font-black">
-                  <i class="fa-sharp fa-solid fa-envelope"></i>
+                  <i className="fa-sharp fa-solid fa-envelope"></i>
                 </div>
                 <div className="text-white/90">info@speedcrafts.com</div>
               </div>

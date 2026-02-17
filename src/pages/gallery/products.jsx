@@ -1,6 +1,6 @@
-// ProductGalleryGrid.jsx
-import React, { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import {React,useMemo, useState } from "react";
+import  {Link}  from "react-router-dom";
+
 import bg from "../../images/Untitled-design-10.webp";
 
 import imgG1 from "../../images/G1.webp";
@@ -24,7 +24,63 @@ import imgG18 from "../../images/G18.jpg";
 import imgG19 from "../../images/G19.jpg";
 import imgG20 from "../../images/G20.jpg";
 
-export default function ProductGalleryGrid() {
+/* ================================
+   CARD COMPONENT (OUTSIDE RENDER)
+================================ */
+function Card({ item }) {
+  return (
+    <Link to={item.link} className="group text-center">
+      <div className="bg-white rounded shadow-lg overflow-hidden">
+        <div className="`h-[230px]`">
+          <img
+            src={item.src}
+            alt={item.label}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <div className="text-xl font-bold text-black group-hover:text-amber-400 transition">
+          {item.label}
+        </div>
+
+        {item.subLabel && (
+          <div className="text-base text-gray-800 mt-1">
+            {item.subLabel}
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+}
+
+/* ================================
+   SECTION COMPONENT (OUTSIDE RENDER)
+================================ */
+function Section({ heading, list }) {
+  if (!list?.length) return null;
+
+  return (
+    <div className="space-y-10">
+      <h2 className="text-3xl font-bold text-center text-amber-400">
+        {heading}
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {list.map((item) => (
+          <Card key={item.link} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ================================
+   MAIN PRODUCTS COMPONENT
+================================ */
+export default function Products() {
   const title = "Product Gallery";
 
   const items = useMemo(
@@ -87,7 +143,7 @@ export default function ProductGalleryGrid() {
         src: imgG9,
         label: "Portable Concrete Plant",
         category: "CONCRETE",
-        link: "/product-gallery/portable-concrete-plant",
+        link: "/products/portable-concrete-plant",
       },
       {
         src: imgG10,
@@ -103,10 +159,10 @@ export default function ProductGalleryGrid() {
       },
 
       // OTHER
-      { src: imgG12, label: "Road Roller", category: "OTHER", link: "/product-gallery/road-roller" },
-      { src: imgG13, label: "Paver Finisher", category: "OTHER", link: "/product-gallery/paver-finisher" },
-      { src: imgG14, label: "Road Sweeper", category: "OTHER", link: "/product-gallery/road-sweeper" },
-      { src: imgG15, label: "Chip Spreader", category: "OTHER", link: "/product-gallery/chip-spreader" },
+      { src: imgG12, label: "Road Roller", category: "OTHER", link: "/product-gallery/road-rollers" },
+      { src: imgG13, label: "Paver Finisher", category: "OTHER", link: "/product-gallery/paver-finishers" },
+      { src: imgG14, label: "Road Sweeper", category: "OTHER", link: "/product-gallery/road-sweepers" },
+      { src: imgG15, label: "Chip Spreader", category: "OTHER", link: "/product-gallery/chip-spreaders" },
       { src: imgG16, label: "Bitumen Pressure Distributor", category: "OTHER", link: "/product-gallery/bitumen-pressure-distributor" },
       { src: imgG17, label: "Trolley Mounted Bitumen Sprayer", category: "OTHER", link: "/product-gallery/trolley-mounted-bitumen-sprayer" },
       { src: imgG18, label: "Bitumen Decanter", category: "OTHER", link: "/product-gallery/bitumen-decanter" },
@@ -134,52 +190,10 @@ export default function ProductGalleryGrid() {
   const concreteItems = filteredItems.filter((x) => x.category === "CONCRETE");
   const otherItems = filteredItems.filter((x) => x.category === "OTHER");
 
-  const Card = ({ item }) => (
-    <Link to={item.link} className="group text-center">
-      <div className="bg-white rounded shadow-lg overflow-hidden">
-        <div className="h-[230px]">
-          <img
-            src={item.src}
-            alt={item.label}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div className="mt-4">
-        <div className="text-xl font-bold text-black group-hover:text-amber-400 transition">
-          {item.label}
-        </div>
-
-        {item.subLabel && (
-          <div className="text-base text-gray-800 mt-1">{item.subLabel}</div>
-        )}
-      </div>
-    </Link>
-  );
-
-  const Section = ({ heading, list }) => {
-    if (!list.length) return null;
-    return (
-      <div className="space-y-10">
-        <h2 className="text-3xl font-bold text-center text-amber-400">
-          {heading}
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {list.map((item, idx) => (
-            <Card key={idx} item={item} />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="bg-white">
       {/* HERO */}
-      <div className="relative h-[220px] md:h-[320px] overflow-hidden">
+      <div className="relative `h-[220px]` `md:h-[320px]` overflow-hidden">
         <img src={bg} alt={title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
@@ -191,7 +205,7 @@ export default function ProductGalleryGrid() {
         </div>
       </div>
 
-      {/* TABS (like your screenshot) */}
+      {/* TABS */}
       <div className="mx-auto max-w-6xl px-4 pt-10">
         <div className="bg-gray-200 rounded-full p-3 flex flex-wrap gap-3 justify-center">
           {tabs.map((t) => {
@@ -218,10 +232,7 @@ export default function ProductGalleryGrid() {
       {/* SECTIONS */}
       <div className="mx-auto max-w-7xl px-4 py-16 space-y-20">
         <Section heading="Asphalt Mixing Plant" list={asphaltItems} />
-        <Section
-          heading="Concrete Mixing Plant & Equipment"
-          list={concreteItems}
-        />
+        <Section heading="Concrete Mixing Plant & Equipment" list={concreteItems} />
         <Section heading="Other Construction Equipment" list={otherItems} />
       </div>
     </div>

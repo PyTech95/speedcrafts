@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import bg from "../../images/Untitled-design-10.webp";
 
-/* ✅ USE THESE IMAGES (Inline Concrete Batching Plant) */
 import img126 from "../../images/126.webp";
 import img128 from "../../images/128.webp";
-import img129 from "../../images/129.webp"; // ✅ fixed (you wrote 129webp)
+import img129 from "../../images/129.webp"; 
 import img130 from "../../images/130.webp";
 import img131 from "../../images/131.webp";
 import img132 from "../../images/132.webp";

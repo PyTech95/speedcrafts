@@ -282,19 +282,19 @@ export default function CompanyProfile() {
           </div>
         </div>
       </section>
-
-     {/* COUNTERS ROW */}
-           <section className="bg-white py-12 border-t border-black/10">
-             <div className="mx-auto  px-4">
-               <div className="grid md:grid-cols-4 gap-10 items-center">
-                 <Counter icon={helmet} value="350+" label="Engineers & Workers" />
-                 <Counter icon={globe} value="5000+" label="Global Clients" />
-                 <Counter icon={award} value="45+" label="Awards Received" />
-                 <Counter icon={handshake} value="17100+" label="Machines Delivered" />
-               </div>
-             </div>
-           </section>
       <OurJourneyTimeline />
+      <section className="bg-[#fbf7ef] py-12">
+          <div className="mx-auto  px-4">
+            <div className="grid md:grid-cols-4 gap-10 items-center">
+              <Counter icon={helmet} value="350+" label="Engineers & Workers" />
+              <Counter icon={globe} value="5000+" label="Global Clients" />
+              <Counter icon={award} value="45+" label="Awards Received" />
+              <Counter icon={handshake} value="17100+" label="Machines Delivered" />
+            </div>
+          </div>
+      </section>
+   <WhatsAppFloat />
+  <ScrollTopFloat />
     </div>
   );
 }

@@ -109,7 +109,7 @@ export default function Infrastructure() {
       </section>
 
       {/* ===== COUNTERS ROW ===== */}
-      <section className="bg-white py-10 border-t border-black/10">
+      <section className="bg-white py-10 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <Counter icon={helmet} value="350+" label="Engineers & Workers" />

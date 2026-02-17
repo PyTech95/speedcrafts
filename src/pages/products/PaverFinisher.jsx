@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import bg from "../../images/Untitled-design-10.webp";
 
-/* ✅ USE THESE IMAGES */
 import img223 from "../../images/223.webp";
 import img224 from "../../images/224.jpeg";
 import img225 from "../../images/225.jpeg";

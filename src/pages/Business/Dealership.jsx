@@ -1,0 +1,198 @@
+import React from "react";
+import bg from "../../images/Untitled-design-10.webp";
+import dealer from "../../images/13-43.webp";
+import handshake1 from "../../images/istockphoto.jpg";
+import helmet from "../../images/1-4.png";
+import globe from "../../images/2-4.png";
+import award from "../../images/3-3.png";
+import handshake from "../../images/4-2.png";
+function Counter({ icon, value, label }) {
+  return (
+    <div className="flex items-center gap-4">
+      <div className="h-22 w-22 bg-amber-400 rounded-full bg-gold-500 grid place-items-center">
+        <img src={icon} alt="" className="h-20 w-25" />
+      </div>
+      <div>
+        <div className="text-4xl font-black text-black">{value}</div>
+        <div className="text-sm font-semibold text-black/80">{label}</div>
+      </div>
+    </div>
+  );
+}
+export default function Dealership() {
+  const title = "Dealership";
+
+  return (
+    <div className="bg-white">
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative h-[250px] md:h-[340px] overflow-hidden">
+        <img src={bg} alt={title} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-3xl md:text-4xl font-semibold">{title}</h1>
+            <p className="mt-2 text-2xl md:text-xl font-semibold">
+              Home / <span className="text-amber-400">{title}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* ================= CONTENT ================= */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        {/* GREETINGS SECTION */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          
+          {/* LEFT TEXT */}
+          <div>
+            <h2 className="text-2xl text-gray-900 font-semibold mb-6">Greetings,</h2>
+
+            <div className="space-y-5 text-gray-900 leading-relaxed">
+              <p>We’re excited to welcome you to our website!</p>
+
+              <p>
+                Our company proudly serves clients in over 60 countries, and we
+                are actively expanding our global presence. Currently, sales are
+                primarily managed directly by our executives, but we are now
+                looking to collaborate with dynamic Sales Representatives,
+                Dealers, and Distributors around the world.
+              </p>
+
+              <p>
+                If you are interested in becoming a part of our growth and
+                representing our products in your country or region, we would
+                love to hear from you. Please take a moment to fill out the form
+                below to express your interest.
+              </p>
+
+              <p className="font-semibold">
+                Let’s work together to bring high-quality equipment to new
+                markets!
+              </p>
+
+              <div className="pt-6">
+                <p className="font-semibold">Best regards,</p>
+                <p className="font-semibold">Shashank Agarwala</p>
+                <p>Director – International Sales</p>
+                <p className="font-semibold">
+                  Mobile : +91 – 96500 89228
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={dealer}
+              alt="Dealership Partnership"
+              className="w-full max-w-[520px] h-auto rounded-md shadow-md"
+            />
+          </div>
+        </div>
+
+        {/* ================= FORM SECTION ================= */}
+        <div className="mt-24">
+          <h2 className="text-3xl text-gray-900 font-semibold mb-10">
+            Let’s Build Success Together
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* LEFT IMAGE */}
+            <div>
+              <img
+                src={handshake1}
+                alt="Dealership Partnership"
+                className="w-full h-[420px] object-cover rounded-md"
+              />
+            </div>
+
+            {/* RIGHT FORM */}
+            <form className="grid grid-cols-1 text-gray-900 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block mb-2 font-medium">Your Name</label>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full border-b border-gray-700 focus:outline-none py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium">Company Name</label>
+                <input
+                  type="text"
+                  placeholder="Company Name"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium">Phone Number</label>
+                <input
+                  type="tel"
+                  placeholder="Your Phone number"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium">Address</label>
+                <input
+                  type="text"
+                  placeholder="Address"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-medium">Country</label>
+                <input
+                  type="text"
+                  placeholder="Country"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block mb-2 font-medium">Requirement</label>
+                <textarea
+                  rows="1"
+                  placeholder="Your Requirement"
+                  className="w-full border-b border-gray-400 focus:outline-none py-2"
+                />
+              </div>
+
+              <div className="md:col-span-2 flex justify-end mt-6">
+                <button
+                  type="submit"
+                  className="px-10 py-3 rounded-full border border-black hover:bg-black hover:text-white transition"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+       <section className="bg-white py-12 ">
+         <div className="mx-auto  px-4">
+           <div className="grid md:grid-cols-4 gap-10 items-center">
+             <Counter icon={helmet} value="350+" label="Engineers & Workers" />
+             <Counter icon={globe} value="5000+" label="Global Clients" />
+             <Counter icon={award} value="45+" label="Awards Received" />
+             <Counter icon={handshake} value="17100+" label="Machines Delivered" />
+           </div>
+         </div>
+       </section>
+    </div>
+  );
+}

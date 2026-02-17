@@ -89,7 +89,7 @@ export default function MissionVisionValues() {
       </section>
 
       {/* COUNTERS ROW */}
-                 <section className="bg-white py-12 border-t border-black/10">
+                 <section className="bg-white py-12">
                    <div className="mx-auto  px-4">
                      <div className="grid md:grid-cols-4 gap-10 items-center">
                        <Counter icon={helmet} value="350+" label="Engineers & Workers" />

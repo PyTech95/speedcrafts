@@ -39,7 +39,36 @@ import WetMixMacadam from "./pages/products/WetMixMacadam.jsx";
 import PotholeRepairing from "./pages/products/PotholeRepairing.jsx";
 
 import Products from "./pages/gallery/products.jsx";
+import AsphaltAmericanSpecsPlant from "./pages/gallery/AsphaltAmericanSpecs.jsx";
+import AsphaltDrumMixPlant from "./pages/gallery/AsphaltDrumMix.jsx";
+import MobileAsphaltMixingPlant from "./pages/gallery/MobileAsphaltMixingPlant.jsx";
+import MobileHotMixPlant from "./pages/gallery/MobileHotMmixPlant.jsx";
+import InlineConcretePlants from "./pages/gallery/InlineConcretePlant.jsx";
+import CompactConcretePlants from "./pages/gallery/CompactConcretePlant.jsx";
+import ContainerisedConcretePlant from "./pages/gallery/ContainerisedConcretePlant.jsx";
+import MobileConcretePlants from "./pages/gallery/MobileConcretePlant.jsx";
+import ConcreteConveyor from "./pages/gallery/ConcreteConveyor.jsx";
+import RoadRollers from "./pages/gallery/RoadRoller.jsx";
+import PaverFinishers from "./pages/gallery/PaverFinisher.jsx";
+import RoadSweepers from "./pages/gallery/RoadSweeper.jsx";
+import ChipSpreaders from "./pages/gallery/ChipSpreader.jsx";
+import BitumenPressureDistributor from "./pages/gallery/BitumenPressureDistributor.jsx";
+import TrolleyMountedBitumenSprayer from "./pages/gallery/TrolleyMountedBitumenSprayer.jsx";
+import BitumenDecanters from "./pages/gallery/BitumenDecanter.jsx";
+import PotholeRepairingMachine from "./pages/gallery/PotholeRepairingMachine.jsx";
+import WetMixMacadamPlant from "./pages/gallery/WetMixMacadamPlant.jsx";
 
+import Exhibitions from "./pages/gallery/Exhibitions.jsx";
+import ClientsVisit from "./pages/gallery/ClientsVisit.jsx";
+import Despatch from "./pages/gallery/Despatch.jsx";
+import PortStuffing from "./pages/gallery/PortStuffing.jsx";
+import Videos from "./pages/gallery/Videos.jsx";
+
+import ForBuyers from "./pages/Information/ForBuyers.jsx";
+import ForCompetitors from "./pages/Information/ForCompetitors.jsx";
+
+import Dealership from "./pages/Business/Dealership.jsx";
+import JointVenture from "./pages/Business/JointVenture.jsx"
 export default function App() {
   return (
     <Routes>
@@ -77,11 +106,41 @@ export default function App() {
         <Route path="/products/Pothole-Repairing" element={<PotholeRepairing/>}/>
 
         <Route path="/gallery/Products" element={<Products/>}/>
+        <Route path="/product-gallery/asphalt-drum-mix-plant-international-specs" element={<AsphaltDrumMixPlant/>}/>
+        <Route path="/product-gallery/asphalt-drum-mix-plant-american-specs" element={<AsphaltAmericanSpecsPlant/>}/>
+        <Route path="/product-gallery/mobile-asphalt-mixing-plant" element={<MobileAsphaltMixingPlant/>}/>
+        <Route path="/product-gallery/mobile-hot-mix-plant" element={<MobileHotMixPlant/>}/>
+        <Route path="/product-gallery/inline-concrete-batching-plant" element={<InlineConcretePlants/>}/>
+        <Route path="/product-gallery/compact-concrete-plant" element={<CompactConcretePlants/>}/>
+        <Route path="/product-gallery/containerised-concrete-plant" element={<ContainerisedConcretePlant/>}/>
+        <Route path="/product-gallery/mobile-concrete-plant" element={<MobileConcretePlants/>}/>
+        <Route path="/product-gallery/concrete-conveyor" element={<ConcreteConveyor/>}/>
+        <Route path="/product-gallery/road-rollers" element={<RoadRollers/>}/>
+        <Route path="/product-gallery/paver-finishers" element={<PaverFinishers/>}/>
+        <Route path="/product-gallery/road-sweepers" element={<RoadSweepers/>}/>
+        <Route path="/product-gallery/chip-spreaders" element={<ChipSpreaders/>}/>
+        <Route path="/product-gallery/bitumen-pressure-distributor" element={<BitumenPressureDistributor/>}/>
+        <Route path="/product-gallery/trolley-mounted-bitumen-sprayer" element={<TrolleyMountedBitumenSprayer/>}/>
+        <Route path="/product-gallery/bitumen-decanter" element={<BitumenDecanters/>}/>
+        <Route path="/product-gallery/pothole-repairing-machine" element={<PotholeRepairingMachine/>}/>
+        <Route path="/product-gallery/wet-mix-macadam-plant" element={<WetMixMacadamPlant/>}/>
+        
+       <Route path="/gallery/exhibitions" element={<Exhibitions/>} />
+       <Route path="/gallery/clients-visit" element={<ClientsVisit/>} />
+       <Route path="/gallery/despatch" element={<Despatch/>} />
+       <Route path="/gallery/port-stuffing" element={<PortStuffing/>} />
+       <Route path="/gallery/videos" element={<Videos/>} />
 
-        <Route path="/career" element={<Career />} />
-        <Route path="/contact" element={<Contact />} />
+       <Route path="/information/for-buyers" element={<ForBuyers/>} />
+       <Route path="/information/for-competitors" element={<ForCompetitors/>} />
 
-        <Route path="*" element={<NotFound />} />
+       <Route path="/business/dealership" element={<Dealership/>} />
+       <Route path="/business/joint-venture-collaboration" element={<JointVenture/>} />
+
+       <Route path="/career" element={<Career />} />
+       <Route path="/contact" element={<Contact />} />
+
+       <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

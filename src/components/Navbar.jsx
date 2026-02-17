@@ -315,8 +315,14 @@ export default function Navbar() {
         { to: "/gallery/port-stuffing", label: "Port Stuffing" },
         { to: "/gallery/videos", label: "Videos" },
       ],
-      info: [{ to: "/information", label: "Information" }],
-      business: [{ to: "/business", label: "Business" }],
+      info: [
+        { to: "/information/for-buyers", label: "For Buyers" },
+        { to: "/information/for-competitors", label: "For Competitors" }
+      ],
+      business: [
+        { to: "/business/dealership", label: "Dealership" },
+        { to: "/business/joint-venture-collaboration", label: "Joint Venture / Collaboration" }
+      ],
     }),
     []
   );

@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import bg from "../../images/Untitled-design-10.webp";
 import brochurePdf from "../../images/asphalt-and-concrete-plant-brochure.pdf";
 
-/* ✅ USE YOUR IMAGES (246.webp → 261.webp) */
 import img246 from "../../images/246.webp";
 import img247 from "../../images/247.webp";
 import img249 from "../../images/249.webp";

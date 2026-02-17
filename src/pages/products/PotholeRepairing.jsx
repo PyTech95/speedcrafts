@@ -89,9 +89,6 @@ const images = [
   imgA49
 ];
 
-
-
-
   return (
     <div className="bg-white">
 

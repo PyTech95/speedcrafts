@@ -80,7 +80,6 @@ export default function AsphaltAmericanSpecs() {
 
   const title = "Asphalt Plant (American Specs.)";
 
-  // ✅ gallery images
   const images = useMemo(
     () => [
       img86,

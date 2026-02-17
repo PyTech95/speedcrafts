@@ -1,8 +1,5 @@
-// WetMixMacadam.jsx
 import React, { useEffect, useMemo, useState } from "react";
 import bg from "../../images/Untitled-design-10.webp";
-
-// ✅ WMM images (replace with your real files)
 import img269 from "../../images/269.webp";
 import img270 from "../../images/270.webp";
 import img271 from "../../images/271.webp";
