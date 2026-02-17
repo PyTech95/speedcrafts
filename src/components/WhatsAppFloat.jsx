@@ -17,7 +17,7 @@ export default function WhatsAppFloat() {
 
       {/* Popup */}
       {open && (
-        <div className="fixed left-6 bottom-24 w-[320px] h-[520px] rounded-xl shadow-lg overflow-hidden z-50">
+        <div className="fixed left-6 bottom-24 w-[320px] h-[380px] rounded-xl shadow-lg overflow-hidden z-50">
 
           {/* Header */}
           <div className="bg-[#075E54] text-white p-4 flex justify-between items-center">
@@ -39,7 +39,7 @@ export default function WhatsAppFloat() {
 
           {/* Chat Body */}
             <div
-              className="p-6 h-[320px] flex items-start"
+              className="p-6 flex items-start"
               style={{
                 backgroundImage: `url(${bgPattern})`,
                 backgroundSize: "cover",
