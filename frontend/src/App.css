@@ -1,0 +1,80 @@
+/* Speedcrafts Clone - Global Styles */
+
+/* Justify body / paragraph text only on tablet+ where there's enough width.
+   On mobile, justify creates ugly large word gaps. */
+@media (min-width: 768px) {
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+}
+
+/* Keep specific UI text untouched (buttons, form fields, table cells, lists, headings) */
+button p,
+a p,
+.no-justify,
+.no-justify p,
+nav p,
+input,
+textarea,
+select,
+button,
+th,
+td,
+li {
+  text-align: inherit;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #ffffff;
+  color: #18181b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide horizontal scroll */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #f5b218;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e0a30a;
+}
+
+/* Selection */
+::selection {
+  background: #f5b218;
+  color: #000;
+}
