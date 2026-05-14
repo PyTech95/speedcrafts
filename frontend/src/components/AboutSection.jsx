@@ -35,14 +35,55 @@ const AboutSection = () => {
             >
               {aboutContent.title}
             </h2>
-            <div className="space-y-5 text-[15px] md:text-[16px] leading-[1.85] text-zinc-300">
-              {aboutContent.paragraphs.map((p, i) => (
-                <p key={i}>
-                  {i === 0 ? <span className="font-bold text-white">Speedcrafts</span> : null}
-                  {i === 0 ? p.replace('Speedcrafts', '') : p}
-                </p>
-              ))}
-            </div>
+         <div className="w-full max-w-[850px] mx-auto px-4 sm:px-6 lg:px-0">
+  
+  <div
+    className="
+      space-y-5
+      sm:space-y-6
+      md:space-y-7
+
+      text-zinc-300
+
+      text-[14px]
+      sm:text-[15px]
+      md:text-[16px]
+      lg:text-[17px]
+
+      leading-7
+      sm:leading-8
+      md:leading-[2]
+      lg:leading-[2.1]
+
+      tracking-[0.2px]
+      font-light
+
+      text-pretty
+    "
+  >
+    {aboutContent.paragraphs.map((p, i) => (
+      <p
+        key={i}
+        className="
+          text-justify
+          md:text-left
+          text-balance
+        "
+      >
+        {i === 0 && (
+          <span className="font-semibold text-white">
+            Speedcrafts{" "}
+          </span>
+        )}
+
+        {i === 0
+          ? p.replace("Speedcrafts,", "")
+          : p}
+      </p>
+    ))}
+  </div>
+
+</div>
             <div className="mt-8 pt-6 border-t border-zinc-800">
               <p
                 className="text-2xl md:text-3xl font-bold text-[#f5b218] italic"
